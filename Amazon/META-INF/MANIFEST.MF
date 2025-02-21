@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Amazon
+Bundle-SymbolicName: Amazon
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: Amazon
+Bundle-RequiredExecutionEnvironment: JavaSE-23
