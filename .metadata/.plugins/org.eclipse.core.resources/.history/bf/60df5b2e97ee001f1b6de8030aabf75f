@@ -1,0 +1,31 @@
+package StepDefinition;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class Login {
+	
+public WebDriver driver= new ChromeDriver();
+
+@Given("Launch Browser url {string}")
+public void launch_browser_url(String string) throws InterruptedException {
+//	String loc = System.getProperty("user.dir");
+//	System.out.println(loc);
+//	System.setProperty("webdriver.chrome.driver", loc+"/Driver/chromedriver.exe");
+	Thread.sleep(500);
+	driver.get("https://www.google.co.in/");
+
+	
+
+}
+
+@Then("maximize window")
+public void maximize_window() {
+	driver.manage().window().maximize();
+}
+
+
+}

@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+org.eclipse.debug.ui.PREF_FILTER_LAUNCH_TYPES=true
+org.eclipse.debug.ui.PREF_FILTER_TYPE_LIST=org.eclipse.jdt.launching.javaApplet,org.eclipse.jdt.launching.localJavaApplication,org.eclipse.jdt.junit.launchconfig,org.eclipse.debug.core.groups.GroupLaunchConfigurationType,org.eclipse.m2e.Maven2LaunchConfigurationType,org.eclipse.ui.externaltools.ProgramLaunchConfigurationType,org.eclipse.jdt.launching.remoteJavaApplication,org.eclipse.mylyn.java.junit.launchconfig,
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+preferredTargets=default\:default|org.eclipse.lsp4e.debug.toggleBreakpointTarget\:org.eclipse.lsp4e.debug.toggleBreakpointTarget|

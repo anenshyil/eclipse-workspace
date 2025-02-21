@@ -1,0 +1,14 @@
+package TestRunner;
+
+
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;	
+
+@CucumberOptions(features ="C:/Users/dell/eclipse-workspace/MyWebSite/src/test/resource/Features",
+glue ="C:/Users/dell/eclipse-workspace/MyWebSite/src/test/java/StepDefinition",
+dryRun=false,
+monochrome = true)
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+
+}

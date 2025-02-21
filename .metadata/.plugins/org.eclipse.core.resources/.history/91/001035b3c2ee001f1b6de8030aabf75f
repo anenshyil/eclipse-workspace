@@ -1,0 +1,36 @@
+package POM;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+	
+	WebDriver driver;
+	
+By input_Username=By.name("email");
+By button_Follow=By.xpath("//input[@type='submit']");
+
+
+public void enterUserName(String username)
+{
+		driver.findElement(input_Username).sendKeys(username);
+}
+public void clickFollowButton()
+{
+		driver.findElement(button_Follow).click();
+}
+public void userLogin(String username)
+{
+	driver.findElement(input_Username).sendKeys(username);
+	driver.findElement(button_Follow).click();
+
+}
+public void maximizeWindow()
+{
+	driver.manage().window().maximize();
+}
+public LoginPage(WebDriver driver)
+{
+	this.driver=driver;
+}
+}

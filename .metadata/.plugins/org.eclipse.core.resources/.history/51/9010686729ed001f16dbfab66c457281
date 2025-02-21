@@ -1,0 +1,13 @@
+Feature: To Test Home Page for my Website
+
+Scenario  : To Check User Authentication is working
+
+Given  User Enters website "https://courses.ultimateqa.com/users/sign_in"
+When  User Give the credentials "practice@gmail.com" pwd "SuperSecretPassword!" 
+
+Then User Verified Remember me is checked
+And User Verifies forgot password is present
+Then  User clicks on Login button
+And  Verifies login page is loading
+
+

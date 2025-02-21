@@ -1,0 +1,36 @@
+package StepDefinition;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import POM.LoginPage;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class Login {
+	
+public WebDriver driver= new ChromeDriver();
+LoginPage login;
+
+@Given("Launch Browser url {string}")
+public void launch_browser_url(String url) throws InterruptedException {
+
+	login=new LoginPage(driver);
+	login.LaunchBrowser(url);
+	login.maximizeWindow();
+	login.userLogin(url);
+	
+}
+
+@Then("maximize window")
+public void maximize_window() {
+	driver.manage().window().maximize();
+}
+
+@Given("User provides {int}@gmail.com")
+public void user_provides_gmail_com(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+}

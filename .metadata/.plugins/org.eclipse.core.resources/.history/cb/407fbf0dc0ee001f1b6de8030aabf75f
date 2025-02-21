@@ -1,0 +1,17 @@
+package POM;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+	
+	WebDriver driver;
+	
+By input_Username=By.id("");
+By input_Password=By.id("");
+By button_Login=By.id("");
+
+
+	
+
+}

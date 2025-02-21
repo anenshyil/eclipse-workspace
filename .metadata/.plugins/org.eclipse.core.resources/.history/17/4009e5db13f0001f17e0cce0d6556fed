@@ -1,0 +1,9 @@
+
+Feature: To Verify Home Page Functionalities
+
+  Scenario: Title of your scenario
+    Given Home Page is loading in screen
+    When Title is present
+    AND Title is in correct font
+    Then Verify Menu is present 
+   

@@ -1,0 +1,12 @@
+package StepDefinition;
+
+import io.cucumber.java.en.Given;
+
+public class HomPage {
+	@Given("Verify User able to launch browser with url {string}")
+	public void verify_user_able_to_launch_browser_with_url(String string) {
+
+	}
+
+
+}

@@ -1,0 +1,15 @@
+Feature: Login to application
+
+Background:
+  Given Launch Browser url "https://automationpanda.com/2021/12/29/want-to-practice-test-automation-try-these-demo-sites/"
+    Then maximize window
+	@smoke
+  Scenario: Launch and Login to application
+    Then Close Application
+    
+	Scenario Outline: Verify user able to login
+		Given User provides a credentials <username> 
+		
+Examples:
+|username|
+|testing134@gmail.com|

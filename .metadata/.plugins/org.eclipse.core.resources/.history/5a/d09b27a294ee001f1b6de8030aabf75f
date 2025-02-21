@@ -1,0 +1,6 @@
+
+Feature: Login to application
+
+  Scenario: Launch and Login to application
+    Given Launch Browser url "www.google.com"
+    Then maximize window

@@ -1,0 +1,49 @@
+package POM;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginPage {
+	
+	WebDriver driver=new ChromeDriver();
+
+By input_Username=By.name("email");
+By button_Follow=By.xpath("(//button[@type='submit'] )[1]");
+
+
+public void LaunchBrowser(String url) throws InterruptedException
+{
+	String loc = System.getProperty("user.dir");
+	System.out.println(loc);
+	System.setProperty("webdriver.chrome.driver", loc+"/Driver/chromedriver.exe");
+	Thread.sleep(500);
+	driver.get(url);
+}
+public void enterUserName(String username)
+{
+	driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+
+		driver.findElement(input_Username).sendKeys(username);
+}
+public void clickFollowButton()
+{
+		driver.findElement(button_Follow).click();
+}
+public void userLogin(String username)
+{
+	driver.findElement(input_Username).sendKeys(username);
+	driver.findElement(button_Follow).click();
+
+}
+public void maximizeWindow()
+{
+	driver.manage().window().maximize();
+}
+public LoginPage(WebDriver driver)
+{
+	this.driver=driver;
+}
+}

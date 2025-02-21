@@ -1,0 +1,6 @@
+Feature: Title of your feature
+  I want to use this template for my feature file
+
+@test
+  Scenario: Title of your scenario
+    Given Verify User able to launch browser with url "www.google.com"

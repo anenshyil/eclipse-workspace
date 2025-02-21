@@ -1,0 +1,12 @@
+package TestRunner;
+
+import io.cucumber.junit.CucumberOptions;
+
+
+@CucumberOptions(features ="C:/Users/dell/eclipse-workspace/MyWebSite/src/test/resource/Features/HomePage1.feature",
+glue ="C:/Users/dell/eclipse-workspace/MyWebSite/src/test/java/StepDefinition/HomPage.java",
+dryRun=false)
+public class TestRunner {
+
+
+}

@@ -1,0 +1,69 @@
+package StepDefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+
+
+public class TestAppplication {
+	
+	
+	public  WebDriver driver=null;
+	
+
+	@Given("^User Enters website \"([^\"]*)\"$")
+	public void user_Enters_website(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		String dir = System.getProperty("user.dir");
+		System.out.println(dir);
+		System.setProperty("Webdriver.chrome.driver", dir+"driver/chromedriver.exe");
+		driver=new ChromeDriver();
+	   driver.get(arg1);
+	   driver.manage().window().maximize();
+	}
+
+	@When("^User Give the credentials \"([^\"]*)\" pwd \"([^\"]*)\"$")
+	public void user_Give_the_credentials_pwd(String arg1, String arg2) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.id("user[email]")).sendKeys(arg1);
+		driver.findElement(By.id("user[password]")).sendKeys(arg2);
+		System.out.println(arg1+"    "+arg2);
+
+	}
+	@Then("User Verified Remember me is checked")
+	public void user_verified_remember_me_is_checked() {
+	
+		boolean result = driver.findElement(By.id("user[remember_me]")).isEnabled();
+		Assert.assertEquals(result, true);
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+	}
+	@Then("User Verifies forgot password is present")
+	public void user_verifies_forgot_password_is_present() {
+	  String text = driver.findElement(By.className("form__forgot-password")).getText();
+	  Assert.assertEquals(text.trim(), "Forgot Password?");
+	  
+	}
+
+
+	@Then("^User clicks on Login button$")
+	public void user_clicks_on_Login_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@Then("^Verifies login page is loading$")
+	public void verifies_login_page_is_loading() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+
+
+
+	
+}
